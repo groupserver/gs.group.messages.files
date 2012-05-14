@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<configure xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="groupserver">
+
+  <!--The Files tab on the group page-->
+  <browser:viewlet name="gs-group-messages-files-tab"
+    manager="gs.group.home.interfaces.IGroupHomepageTasks"
+    template="browser/templates/filestab.pt"
+    class=".filestab.FilesTab"
+    permission="zope2.Public"
+    weight="3"
+    title="Files" />
+
+</configure>
+
