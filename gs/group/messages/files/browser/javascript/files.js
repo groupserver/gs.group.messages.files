@@ -8,7 +8,8 @@ var GSGroupFilesTab = function () {
     var latestFiles = null;
     var loadingMessage = null;
     // Search Info
-    var ajaxPage = 'gs-group-messages-files-ajax.html';
+    var ajaxPage = '/s/search.ajax';
+    var groupId = null;
     var offset = null;
     var limit = null;
     var toolbarShown = true;
@@ -60,6 +61,10 @@ var GSGroupFilesTab = function () {
         var data = {
             'i': offset,
             'l': limit,
+            'g': groupId,            
+            't': '0',
+            'p': '0',
+            'f': '1'
         };
         jQuery.post(ajaxPage, data, load_complete);
     };// load_files
@@ -89,7 +94,8 @@ var GSGroupFilesTab = function () {
     
     // Public methods and properties.
     return {
-        init: function () {
+        init: function (gid) {
+            groupId = gid;
             limit = 6;
             offset = 0;
         
@@ -104,7 +110,4 @@ var GSGroupFilesTab = function () {
         },//init
     };
 }(); // GSGroupFilesTab
-jQuery(document).ready( function () {
-    GSGroupFilesTab.init()
-});
 
