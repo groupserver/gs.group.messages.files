@@ -5,6 +5,7 @@
 
   <!--The Files tab on the group page-->
   <browser:viewlet name="gs-group-messages-files-tab"
+    for="gs.group.base.interfaces.IGSGroupMarker"
     manager="gs.group.home.interfaces.IGroupHomepageTasks"
     template="browser/templates/filestab.pt"
     class=".filestab.FilesTab"
