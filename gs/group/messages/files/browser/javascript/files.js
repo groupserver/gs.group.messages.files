@@ -80,7 +80,7 @@ var GSGroupFilesTab = function () {
         latestFiles.fadeIn(FADE_SPEED, FADE_METHOD);
         prevButton.button('option', 'disabled', offset <= 0);
         
-        nFiles = latestFiles.find('.file').length;
+        nFiles = latestFiles.find('.fileResult').length;
         nextButton.button('option', 'disabled', nFiles < limit);
         
         if ((offset <= 0) && (nFiles < limit) && toolbarShown) {
