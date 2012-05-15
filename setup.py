@@ -35,6 +35,7 @@ setup(name='gs.group.messages.files',
         'gs.content.js.jquery',
         'gs.group.base',
         'gs.group.home',
+        'Products.GSSearch',
         # -*- Extra requirements: -*-
     ],
     entry_points="""
