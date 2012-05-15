@@ -18,10 +18,19 @@
     template="browser/templates/filesscript.pt"
     class="gs.group.home.simpletab.PublicTab"
     permission="zope2.Public"
+    weight="30"
     title="Files Script" />
   <browser:resource 
     name="gs-group-messages-files-js-20120514.js"
     file="browser/javascript/files.js"
     permission="zope2.Public" />
+  <!--The link to the Web Feed -->
+  <browser:viewlet name="gs-group-messages-files-link"
+    manager="gs.group.home.interfaces.IGroupHomepageMetadata"
+    template="browser/templates/link.pt"
+    class="gs.group.home.simpletab.PublicTab"
+    permission="zope2.View"
+    weight="30"
+    title="Files Link" />
 </configure>
 
