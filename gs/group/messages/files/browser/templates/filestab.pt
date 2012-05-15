@@ -9,13 +9,6 @@
       style="display:none;">
       &#160;
     </div><!--gs-group-messages-files-latest-->
-    <ul id="gs-group-messages-files-tasks" class="inline-list">
-      <li><a tal:define="url string:/s/?t=0&amp;f=1&amp;g=${view/groupInfo/id}"
-          tal:attributes="href url" href="#">More files&#8230;</a></li>
-      <li><a type="application/atom+xml" class="alternateATOM"
-          tal:define="url string:/s/search.atom?t=0&amp;f=1&amp;g=${view/groupInfo/id}"
-          tal:attributes="href url" href="#">Web feed</a></li>
-    </ul>
     <div id="gs-group-messages-files-toolbar">
       <span class="ui-widget-header ui-corner-all"
         style="padding: 0.692em;">
@@ -23,6 +16,13 @@
         <button id="gs-group-messages-files-toolbar-next">Older</button>
       </span>
     </div><!--gs-group-messages-topics-toolbar-->
+    <ul id="gs-group-messages-files-tasks" class="inline-list">
+      <li><a tal:define="url string:/s/?t=0&amp;f=1&amp;g=${view/groupInfo/id}"
+          tal:attributes="href url" href="#">More files&#8230;</a></li>
+      <li><a type="application/atom+xml" class="alternateATOM"
+          tal:define="url string:/s/search.atom?t=0&amp;f=1&amp;g=${view/groupInfo/id}"
+          tal:attributes="href url" href="#">Web feed</a></li>
+    </ul><!--gs-group-messages-files-tasks-->
   </tal:block>  
   <tal:block condition="not:view/viewTopics">
     <!--We must be looking at a private group-->
