@@ -10,7 +10,7 @@
     template="browser/templates/filestab.pt"
     class=".filestab.FilesTab"
     permission="zope2.Public"
-    weight="3"
+    weight="30"
     title="Files" />
   <!--The JavaScript to drive the Files tab-->
   <browser:viewlet name="gs-group-messages-files-script"
