@@ -2,7 +2,7 @@
   <tal:block condition="view/viewTopics">
     <p id="gs-group-messages-files-loading" class="loading-message">
       <img  src="/++resource++anim/wait.gif"/> 
-      Loading the latest files
+      Loading the files
     </p><!--gs-group-messages-files-loading-->
     <div id="gs-group-messages-files-latest" class="items-list">
       &#160;
