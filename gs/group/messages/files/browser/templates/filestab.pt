@@ -1,18 +1,27 @@
 <div id="gs-group-messages-files">
-  <tal:block condition="view/viewTopics">
-    <p id="gs-group-messages-files-loading" class="loading-message">
+  <div id="gs-group-messages-files-search" class="gs-search"
+       tal:condition="view/viewTopics">
+    <div class="gs-search-entry">
+      <input type="text" class="textEntry"/>
+      <button>Search</button>
+    </div>
+    <p id="gs-group-messages-files-loading" class="gs-search-loading"
+       style="display:none;">
       <img  src="/++resource++anim/wait.gif"/> 
       Loading the files
     </p><!--gs-group-messages-files-loading-->
-    <div id="gs-group-messages-files-latest" class="items-list">
+    <div id="gs-group-messages-files-latest" class="gs-search-results">
       &#160;
     </div><!--gs-group-messages-files-latest-->
-    <div id="gs-group-messages-files-toolbar" class="toolbar">
+    <div id="gs-group-messages-files-toolbar" 
+	 class="toolbar gs-search-toolbar">
       <span class="ui-widget-header ui-corner-all">
         <button id="gs-group-messages-files-toolbar-prev">Newer</button>
         <button id="gs-group-messages-files-toolbar-next">Older</button>
       </span>
     </div><!--gs-group-messages-topics-toolbar-->
+  </div>
+  <div id="gs-group-messages-files-tasks" tal:condition="view/viewTopics">
     <ul id="gs-group-messages-files-tasks" class="inline-list">
       <li><a tal:define="url string:/s/?t=0&amp;f=1&amp;g=${view/groupInfo/id}"
           tal:attributes="href url" href="#">More files&#8230;</a></li>
@@ -20,7 +29,7 @@
           tal:define="url string:/s/search.atom?t=0&amp;f=1&amp;g=${view/groupInfo/id}"
           tal:attributes="href url" href="#">Web feed</a></li>
     </ul><!--gs-group-messages-files-tasks-->
-  </tal:block>  
+  </div><!--gs-group-messages-files-tasks-->
   <tal:block condition="not:view/viewTopics">
     <!--We must be looking at a private group-->
     <p>
