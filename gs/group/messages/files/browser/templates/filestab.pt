@@ -1,5 +1,5 @@
 <div id="gs-group-messages-files">
-  <div id="gs-group-messages-files-search" class="gs-search"
+  <div id="gs-group-messages-files-search" class="gs-search search"
        tal:condition="view/viewTopics">
     <div class="gs-search-entry">
       <input type="text" class="textEntry"/>
@@ -16,8 +16,10 @@
     <div id="gs-group-messages-files-toolbar" 
 	 class="toolbar gs-search-toolbar">
       <span class="ui-widget-header ui-corner-all">
-        <button id="gs-group-messages-files-toolbar-prev">Newer</button>
-        <button id="gs-group-messages-files-toolbar-next">Older</button>
+        <button id="gs-group-messages-files-toolbar-prev"
+		class="gs-search-toolbar-next">Newer</button>
+        <button id="gs-group-messages-files-toolbar-next"
+		class="gs-search-toolbar-previous">Older</button>
       </span>
     </div><!--gs-group-messages-topics-toolbar-->
   </div>
