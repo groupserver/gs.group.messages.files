@@ -1,7 +1,7 @@
 <div id="gs-group-messages-files">
   <div id="gs-group-messages-files-search" class="gs-search search"
        tal:condition="view/viewTopics">
-    <div class="gs-search-entry">
+    <div class="gs-search-entry" style="display:none;">
       <input type="text" class="textEntry"/>
       <button>Search</button>
     </div>
