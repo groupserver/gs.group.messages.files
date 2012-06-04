@@ -17,9 +17,9 @@
 	 class="toolbar gs-search-toolbar">
       <span class="ui-widget-header ui-corner-all">
         <button id="gs-group-messages-files-toolbar-prev"
-		class="gs-search-toolbar-next">Newer</button>
+		class="gs-search-toolbar-previous">Newer</button>
         <button id="gs-group-messages-files-toolbar-next"
-		class="gs-search-toolbar-previous">Older</button>
+		class="gs-search-toolbar-next">Older</button>
       </span>
     </div><!--gs-group-messages-topics-toolbar-->
   </div>
