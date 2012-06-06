@@ -32,9 +32,10 @@ setup(name='gs.group.messages.files',
     zip_safe=True,
     install_requires=[
         'setuptools',
-        'gs.content.js.jquery',
+        'gs.content.js.jquery',        
         'gs.group.base',
         'gs.group.home',
+        'gs.group.messages.base',
         'Products.GSSearch',
         # -*- Extra requirements: -*-
     ],
