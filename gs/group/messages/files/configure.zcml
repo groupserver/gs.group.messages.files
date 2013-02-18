@@ -4,7 +4,8 @@
   i18n_domain="groupserver">
 
   <!--The Files tab on the group page-->
-  <browser:viewlet name="gs-group-messages-files-tab"
+  <browser:viewlet
+    name="gs-group-messages-files-tab"
     for="gs.group.base.interfaces.IGSGroupMarker"
     manager="gs.group.home.interfaces.IGroupHomepageSecondary"
     template="browser/templates/filestab.pt"
@@ -12,11 +13,11 @@
     permission="zope2.Public"
     weight="30"
     title="Files" />
-  <!--The JavaScript to drive the Files tab-->
-  <browser:viewlet name="gs-group-messages-files-script"
+  <browser:viewlet 
+    name="gs-group-messages-files-script"
     manager="gs.group.home.interfaces.IGroupHomepageScripts"
     template="browser/templates/filesscript.pt"
-    class="gs.group.home.simpletab.PublicTab"
+    class=".filestab.FilesTab"
     permission="zope2.Public"
     weight="30"
     title="Files Script" />
@@ -24,6 +25,13 @@
     name="gs-group-messages-files-js-20120604.js"
     file="browser/javascript/files.js"
     permission="zope2.Public" />
+  <browser:page 
+    name="gs-group-messages-files-ajax.html"
+    for="gs.group.base.interfaces.IGSGroupMarker"
+    template="browser/templates/ajax.pt"
+    class=".ajax.FilesAjax"
+    permission="zope2.View" />
+
   <!--The link to the Web Feed -->
   <browser:viewlet name="gs-group-messages-files-link"
     manager="gs.group.home.interfaces.IGroupHomepageMetadata"

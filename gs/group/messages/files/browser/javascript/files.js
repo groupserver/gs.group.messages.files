@@ -1,14 +1,15 @@
 jQuery.noConflict();
 function gs_group_messages_files_init_home() {
-    // HACK to get the group ID for the AJAX.
-    var bodyId = null, gId = null, e = /_.*$/, filesSearch = null, d = null,
-        show_files = null;
+    var filesSearch = null, b = null, url = null;
 
-    bodyId = jQuery('body').attr('id');
-    gId = String(e.exec(bodyId)).slice(1);
-    d = {'g': gId, 't': '0', 'f': '1'};
-    filesSearch = GSSearch('#gs-group-messages-files-search',
-                           '/s/search.ajax', 0, 5, d, null);
+    b = jQuery('base').attr('href');
+    if (b[b.length -1] != '/') {
+        b = b + '/';
+    }
+    url = b + 'gs-group-messages-files-ajax.html';
+
+    filesSearch = GSSearch('#gs-group-messages-files-search', url, 0, 5, {}, 
+                           null);
     filesSearch.load();
 }
 

@@ -1,0 +1,11 @@
+<div class="gs-search-results">
+  <tal:block repeat="file view/files">
+    <div class="gs-search-result">
+      <a href="#" tal:content="file/name"
+         tal:attributes="href file/url; type file/mime_type">Name</a>
+      <a href="#" class="muted"
+         tal:attributes="href file/postUrl">Posted in 
+         <em tal:content="file/subject">Topic</em></a>
+    </div>
+  </tal:block>
+</div><!--gs-search-results-->

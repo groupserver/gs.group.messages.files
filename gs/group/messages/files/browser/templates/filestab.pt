@@ -1,4 +1,4 @@
-<div id="gs-group-messages-files" tal:condition="view/viewTopics">
+<div id="gs-group-messages-files">
   <h3>Recent files</h3>
   <div id="gs-group-messages-files-search" class="gs-search search">
     <div class="gs-search-entry search input-append" 
