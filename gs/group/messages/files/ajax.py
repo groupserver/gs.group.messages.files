@@ -25,4 +25,6 @@ class FilesAjax(GroupPage):
             f['url'] = '{0}/{1}'.format(base, f['file_id'])
             f['postUrl'] = '{0}/messages/post/{1}'.format(
                                     self.groupInfo.relativeURL, f['post_id'])
+            f['imgUrl'] = \
+                '{0}/{1}'.format(fileBase, f['file_id']) if f['isImage'] else ''
         return files
