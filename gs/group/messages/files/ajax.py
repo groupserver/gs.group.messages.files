@@ -17,12 +17,12 @@ class FilesAjax(GroupPage):
     def files(self):
         fs = FileQuery()
         files = fs.recent_files(self.siteInfo.id, self.groupInfo.id, 5)
-        imgBase = '{0}/messages/image/'.format(self.groupInfo.relativeURL)
-        fileBase = '{0}/messages/files/f/'.format(self.groupInfo.relativeURL)
+        imgBase = '{0}/messages/image'.format(self.groupInfo.relativeURL)
+        fileBase = '{0}/files/f'.format(self.groupInfo.relativeURL)
         for f in files:
             f['isImage'] = f['mime_type'][:5] == 'image'
             base = imgBase if f['isImage'] else fileBase
-            f['url'] = '{0}{1}'.format(base, f['file_id'])
-            f['postUrl'] = '{0}messages/post/{1}'.format(
+            f['url'] = '{0}/{1}'.format(base, f['file_id'])
+            f['postUrl'] = '{0}/messages/post/{1}'.format(
                                     self.groupInfo.relativeURL, f['post_id'])
         return files
