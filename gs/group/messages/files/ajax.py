@@ -17,8 +17,8 @@ class FilesAjax(GroupPage):
     def files(self):
         fs = FileQuery()
         files = fs.recent_files(self.siteInfo.id, self.groupInfo.id, 5)
-        imgBase = '{0}messages/image/'.format(self.groupInfo.relativeURL)
-        fileBase = '{0}messages/files/f/'.format(self.groupInfo.relativeURL)
+        imgBase = '{0}/messages/image/'.format(self.groupInfo.relativeURL)
+        fileBase = '{0}/messages/files/f/'.format(self.groupInfo.relativeURL)
         for f in files:
             f['isImage'] = f['mime_type'][:5] == 'image'
             base = imgBase if f['isImage'] else fileBase
