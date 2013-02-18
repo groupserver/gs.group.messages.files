@@ -1,46 +1,29 @@
-<div id="gs-group-messages-files">
-  <div id="gs-group-messages-files-search" class="gs-search search"
-       tal:condition="view/viewTopics">
-    <div class="gs-search-entry" style="display:none;">
-      <input type="text" class="textEntry"/>
-      <button>Search</button>
-    </div>
+<div id="gs-group-messages-files" tal:condition="view/viewTopics">
+  <h3>Recent files</h3>
+  <div id="gs-group-messages-files-search" class="gs-search search">
+    <div class="gs-search-entry search input-append" 
+         style="display:none;">
+      <input type="search" name="s" placeholder="Search files&#8230;"
+             autocomplete="on" value="" title="Search"/>
+      <button id="gs-group-messages-topics-search-button"
+              class="btn">Search</button>
+    </div><!--gs-search-entry-->
     <p id="gs-group-messages-files-loading" class="gs-search-loading"
        style="display:none;">
       <img  src="/++resource++anim/wait.gif"/> 
-      Loading the files
+      Loading the files&#8230;
     </p><!--gs-group-messages-files-loading-->
     <div id="gs-group-messages-files-latest" class="gs-search-results">
       &#160;
     </div><!--gs-group-messages-files-latest-->
     <div id="gs-group-messages-files-toolbar" 
-	 class="toolbar gs-search-toolbar">
+         class="toolbar gs-search-toolbar" style="display:none;">
       <span class="ui-widget-header ui-corner-all">
         <button id="gs-group-messages-files-toolbar-prev"
-		class="gs-search-toolbar-previous">Newer</button>
+                class="gs-search-toolbar-previous">Newer</button>
         <button id="gs-group-messages-files-toolbar-next"
-		class="gs-search-toolbar-next">Older</button>
+                class="gs-search-toolbar-next">Older</button>
       </span>
     </div><!--gs-group-messages-topics-toolbar-->
   </div>
-  <div id="gs-group-messages-files-tasks" tal:condition="view/viewTopics">
-    <ul id="gs-group-messages-files-tasks" class="inline-list">
-      <li><a tal:define="url string:/s/?t=0&amp;f=1&amp;g=${view/groupInfo/id}"
-          tal:attributes="href url" href="#">More files&#8230;</a></li>
-      <li><a type="application/atom+xml" class="alternateATOM"
-          tal:define="url string:/s/search.atom?t=0&amp;f=1&amp;g=${view/groupInfo/id}"
-          tal:attributes="href url" href="#">Web feed</a></li>
-    </ul><!--gs-group-messages-files-tasks-->
-  </div><!--gs-group-messages-files-tasks-->
-  <tal:block condition="not:view/viewTopics">
-    <!--We must be looking at a private group-->
-    <p>
-      You must be a logged in member of 
-      <span class="group" tal:content="view/groupInfo/name">this group</span>
-      to view the files.
-      <!--a tal:attributes="href string:/login.html?came_from=${view/groupInfo/url}"
-        href="#"><strong>Login</strong> if you are already a 
-        member.</a-->
-    </p>
-  </tal:block>  
 </div><!--gs-group-messages-files-->

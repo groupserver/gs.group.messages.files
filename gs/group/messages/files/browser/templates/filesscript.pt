@@ -1,4 +1,3 @@
-<script 
-  id="gs-group-messages-files-script"
-  src="/++resource++gs-group-messages-files-js-20120604.js"
-  type="text/javascript">&#160;</script><!--gs-group-messages-files-script-->
+<script id="gs-group-messages-files-script" type="text/javascript"
+        src="/++resource++gs-group-messages-files-js-20120604.js"
+        defer="true">&#160;</script>
