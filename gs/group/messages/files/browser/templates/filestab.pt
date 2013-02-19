@@ -25,5 +25,12 @@
                 class="gs-search-toolbar-next">Older</button>
       </span>
     </div><!--gs-group-messages-topics-toolbar-->
-  </div>
+  </div><!--gs-group-messages-files-search-->
+  <ul class="dotted-inline-list">
+    <li><a tal:attributes="href string:/s?g=${view/groupInfo/id}&amp;f=1&amp;t=0" 
+          href="#">All files</a></li>
+    <li><a class="alternateATOM" href="#" 
+           tal:attributes="href string:/s/search.atom?g=${view/groupInfo/id}&amp;t=0&amp;p=0&amp;f=1;"
+           type="application/atom+xml">&#160;</a></li>
+  </ul>
 </div><!--gs-group-messages-files-->
