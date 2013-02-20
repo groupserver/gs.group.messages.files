@@ -1,23 +1,25 @@
-<div id="gs-group-messages-files">
-  <h3>Recent files</h3>
+<div id="gs-group-messages-files" role="region" 
+     aria-labelledby="gs-group-messages-files-h">
+  <h3 id="gs-group-messages-files-h">Recent files</h3>
   <div id="gs-group-messages-files-search" class="gs-search search">
     <div class="gs-search-entry search input-append" 
-         style="display:none;">
+         style="display:none;" aria-visible="false">
       <input type="search" name="s" placeholder="Search files&#8230;"
              autocomplete="on" value="" title="Search"/>
       <button id="gs-group-messages-topics-search-button"
               class="btn">Search</button>
     </div><!--gs-search-entry-->
     <p id="gs-group-messages-files-loading" class="gs-search-loading"
-       style="display:none;">
-      <img  src="/++resource++anim/wait.gif"/> 
+       style="display:none;" role="status">
+      <img  src="/++resource++anim/wait.gif" aria-visible="false" /> 
       Loading the files&#8230;
     </p><!--gs-group-messages-files-loading-->
-    <div id="gs-group-messages-files-latest" class="gs-search-results">
+    <div id="gs-group-messages-files-latest" class="gs-search-results"
+         aria-live="polite">
       &#160;
     </div><!--gs-group-messages-files-latest-->
-    <div id="gs-group-messages-files-toolbar" 
-         class="toolbar gs-search-toolbar" style="display:none;">
+    <div id="gs-group-messages-files-toolbar" class="toolbar gs-search-toolbar" 
+         style="display:none;" aria-visible="false">
       <span class="ui-widget-header ui-corner-all">
         <button id="gs-group-messages-files-toolbar-prev"
                 class="gs-search-toolbar-previous">Newer</button>
@@ -26,7 +28,7 @@
       </span>
     </div><!--gs-group-messages-topics-toolbar-->
   </div><!--gs-group-messages-files-search-->
-  <ul class="dotted-inline-list">
+  <ul class="dotted-inline-list" role="navigation">
     <li><a tal:attributes="href string:/s?g=${view/groupInfo/id}&amp;f=1&amp;t=0" 
           href="#">All files</a></li>
     <li><a class="alternateATOM" href="#" 
