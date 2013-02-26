@@ -1,6 +1,14 @@
 <div id="gs-group-messages-files" role="region" 
      aria-labelledby="gs-group-messages-files-h">
   <h3 id="gs-group-messages-files-h">Recent files</h3>
+  <ul id="gs-group-messages-files-nav" role="navigation"
+      class="dotted-inline-list" >
+    <li><a tal:attributes="href string:/s?g=${view/groupInfo/id}&amp;f=1&amp;t=0" 
+          href="#">All files</a></li>
+    <li><a class="alternateATOM" href="#" 
+           tal:attributes="href string:/s/search.atom?g=${view/groupInfo/id}&amp;t=0&amp;p=0&amp;f=1;"
+           type="application/atom+xml">&#160;</a></li>
+  </ul>
   <div id="gs-group-messages-files-search" class="gs-search search">
     <div class="gs-search-entry search input-append" 
          style="display:none;" aria-visible="false">
@@ -28,11 +36,4 @@
       </span>
     </div><!--gs-group-messages-topics-toolbar-->
   </div><!--gs-group-messages-files-search-->
-  <ul class="dotted-inline-list" role="navigation">
-    <li><a tal:attributes="href string:/s?g=${view/groupInfo/id}&amp;f=1&amp;t=0" 
-          href="#">All files</a></li>
-    <li><a class="alternateATOM" href="#" 
-           tal:attributes="href string:/s/search.atom?g=${view/groupInfo/id}&amp;t=0&amp;p=0&amp;f=1;"
-           type="application/atom+xml">&#160;</a></li>
-  </ul>
 </div><!--gs-group-messages-files-->
