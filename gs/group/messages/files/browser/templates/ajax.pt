@@ -1,8 +1,11 @@
 <div class="gs-search-results">
   <tal:block repeat="file view/files">
     <div class="gs-search-result hmedia">
-      <img tal:condition="file/isImage" class="photo"
-           tal:attributes="src string:${file/imgUrl}/36/36" />
+      <span tal:condition="file/isImage"
+            tal:define="size string:35; fileId file/file_id;"
+            tal:replace="structure provider:groupserver.SquareGroupImage">
+        An image
+      </span>
       <div class="fn">
         <a href="#" tal:content="file/name"
            tal:attributes="href file/url; type file/mime_type">Name</a>
