@@ -37,7 +37,8 @@
     permission="zope2.View" />
 
   <!--The link to the Web Feed -->
-  <browser:viewlet name="gs-group-messages-files-link"
+  <browser:viewlet 
+    name="gs-group-messages-files-link"
     manager="gs.group.home.interfaces.IGroupHomepageMetadata"
     template="browser/templates/link.pt"
     class="gs.group.home.simpletab.PublicTab"

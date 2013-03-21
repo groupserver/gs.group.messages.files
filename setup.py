@@ -7,7 +7,7 @@ version = get_version()
 
 setup(name='gs.group.messages.files',
     version=version,
-    description="The Files tab in a GroupServer Group",
+    description="The Files list in a GroupServer Group homepage.",
     long_description=open("README.txt").read() + "\n" +
                       open(os.path.join("docs", "HISTORY.txt")).read(),
     classifiers=[
@@ -40,8 +40,7 @@ setup(name='gs.group.messages.files',
         'gs.group.base',
         'gs.group.home',
         'gs.group.messages.base',
-        'Products.GSSearch',
-        # -*- Extra requirements: -*-
+        'gs.search.base',
     ],
     entry_points="""
     # -*- Entry points: -*-
