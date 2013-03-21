@@ -25,6 +25,10 @@
     name="gs-group-messages-files-js-20120604.js"
     file="browser/javascript/files.js"
     permission="zope2.Public" />
+  <browser:resource 
+    name="gs-group-messages-files-js-min-20120604.js"
+    file="browser/javascript/files-min.js"
+    permission="zope2.Public" />
   <browser:page 
     name="gs-group-messages-files-ajax.html"
     for="gs.group.base.interfaces.IGSGroupMarker"
