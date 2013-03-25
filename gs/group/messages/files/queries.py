@@ -26,6 +26,7 @@ class FileQuery(object):
 
         session = getSession()
         r = session.execute(s)
+        retval = []
         if r.rowcount:
             retval = [{'user_id': row['user_id'],
                         'file_id': row['file_id'],
