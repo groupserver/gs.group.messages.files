@@ -3,7 +3,7 @@
     <div class="gs-search-result hmedia">
       <a tal:condition="file/isImage"
          class="gs-group-messages-files-file-icon gs-group-messages-files-file-icon-img"
-         tal:attributes="href file/url; title file/name"
+         tal:attributes="href file/url; title file/name; type file/mime_type"
          tal:define="size string:35; fileId file/file_id;">
          <span tal:replace="structure provider:groupserver.SquareGroupImage">
            An image
@@ -11,7 +11,7 @@
        </a>
        <a tal:condition="not:file/isImage"
           class="gs-group-messages-files-file-icon icon-alone" href="#"
-          tal:attributes="href file/url; title file/name">
+          tal:attributes="href file/url; title file/name; type file/mime_type">
          <span aria-hidden="true" data-icon="&#x1f3a8;"
                tal:attributes="data-icon file/icon"></span>
          <span class="screen-reader-text">File type:
