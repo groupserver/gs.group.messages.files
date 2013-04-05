@@ -2,6 +2,7 @@
 from zope.cachedescriptors.property import Lazy
 from AccessControl import getSecurityManager
 from gs.group.base.page import GroupPage
+from gs.group.messages.topics.topicssearch import ICON_CHAR
 from queries import FileQuery
 
 
@@ -27,4 +28,5 @@ class FilesAjax(GroupPage):
                                     self.groupInfo.relativeURL, f['post_id'])
             f['imgUrl'] = \
                 '{0}/{1}'.format(fileBase, f['file_id']) if f['isImage'] else ''
+            f['icon'] = ICON_CHAR.get(f['mime_type'][:5], ICON_CHAR['other'])
         return files

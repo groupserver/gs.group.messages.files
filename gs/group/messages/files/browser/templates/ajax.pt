@@ -1,14 +1,27 @@
 <div class="gs-search-results">
   <tal:block repeat="file view/files">
     <div class="gs-search-result hmedia">
-      <span tal:condition="file/isImage"
-            tal:define="size string:35; fileId file/file_id;"
-            tal:replace="structure provider:groupserver.SquareGroupImage">
-        An image
-      </span>
+      <a tal:condition="file/isImage"
+         class="gs-group-messages-files-file-icon gs-group-messages-files-file-icon-img"
+         tal:attributes="href file/url; title file/name"
+         tal:define="size string:35; fileId file/file_id;">
+         <span tal:replace="structure provider:groupserver.SquareGroupImage">
+           An image
+         </span>
+       </a>
+       <a tal:condition="not:file/isImage"
+          class="gs-group-messages-files-file-icon icon-alone" href="#"
+          tal:attributes="href file/url; title file/name">
+         <span aria-hidden="true" data-icon="&#x1f3a8;"
+               tal:attributes="data-icon file/icon"></span>
+         <span class="screen-reader-text">File type:
+           <span tal:content="file/mime_type">application/octet-stream</span>
+         </span>
+       </a>
       <div class="fn">
         <a href="#" tal:content="file/name"
-           tal:attributes="href file/url; type file/mime_type">Name</a>
+           tal:attributes="href file/url; type file/mime_type; 
+                           title file/name;">Name</a>
       </div>
       <div class="muted">
         <a href="#" 
