@@ -3,12 +3,15 @@
   <h3 id="gs-group-messages-files-h">Recent files</h3>
   <ul id="gs-group-messages-files-nav" role="navigation"
       class="dotted-inline-list" >
-    <li><a tal:attributes="href string:/s?g=${view/groupInfo/id}&amp;f=1&amp;t=0" 
-          href="#">All files</a></li>
     <li>
-      <a class="alternateATOM icon-alone" href="#" 
-         tal:attributes="href string:/s/search.atom?g=${view/groupInfo/id}&amp;t=0&amp;p=0&amp;f=1;"
-         type="application/atom+xml">
+      <a tal:attributes="href string:/s?g=${view/groupInfo/id}&amp;f=1&amp;t=0" 
+         href="#">All files</a>
+    </li>
+    <li>
+      <a type="application/atom+xml" class="icon-alone" href="#"
+         tal:define="url string:/s/search.atom?g=${view/groupInfo/id}&amp;t=0&amp;p=0&amp;f=1;"
+         tal:attributes="href url; 
+                         title string:Files in ${view/groupInfo/name}">
         <span aria-hidden="true" data-icon="&#xe003;"></span>
         <span class="screen-reader-text">Web feed</span>
       </a>
