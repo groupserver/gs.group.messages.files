@@ -1,4 +1,4 @@
-# coding=utf-8
+# -*- coding: utf-8 -*-
 import os
 from setuptools import setup, find_packages
 from version import get_version
@@ -35,7 +35,7 @@ setup(name='gs.group.messages.files',
         'sqlalchemy',
         'zope.cachedescriptors',
         'AccessControl',
-        'gs.content.js.jquery',
+        'gs.content.js.jquery.base',
         'gs.database',
         'gs.group.base',
         'gs.group.home',
