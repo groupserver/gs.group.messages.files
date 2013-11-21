@@ -1,16 +1,16 @@
-<div id="gs-group-messages-files" role="region" 
+<div id="gs-group-messages-files" role="region"
      aria-labelledby="gs-group-messages-files-h">
   <h3 id="gs-group-messages-files-h">Recent files</h3>
   <ul id="gs-group-messages-files-nav" role="navigation"
       class="dotted-inline-list" >
     <li>
-      <a tal:attributes="href string:/s?g=${view/groupInfo/id}&amp;f=1&amp;t=0" 
+      <a tal:attributes="href string:/s?g=${view/groupInfo/id}&amp;f=1&amp;t=0"
          href="#">All files</a>
     </li>
     <li>
       <a type="application/atom+xml" class="icon-alone" href="#"
          tal:define="url string:/s/search.atom?g=${view/groupInfo/id}&amp;t=0&amp;p=0&amp;f=1;"
-         tal:attributes="href url; 
+         tal:attributes="href url;
                          title string:Files in ${view/groupInfo/name}">
         <span aria-hidden="true" data-icon="&#xe003;"></span>
         <span class="screen-reader-text">Web feed</span>
@@ -18,7 +18,7 @@
     </li>
   </ul>
   <div id="gs-group-messages-files-search" class="gs-search search">
-    <div class="gs-search-entry search input-append" 
+    <div class="gs-search-entry search input-append"
          style="display:none;" aria-visible="false">
       <input type="search" name="s" placeholder="Search files&#8230;"
              autocomplete="on" value="" title="Search"/>
@@ -27,14 +27,14 @@
     </div><!--gs-search-entry-->
     <p id="gs-group-messages-files-loading" class="gs-search-loading"
        style="display:none;" role="status">
-      <img  src="/++resource++anim/wait.gif" aria-visible="false" /> 
+      <img  src="/++resource++anim/wait.gif" aria-visible="false" />
       Loading the files&#8230;
     </p><!--gs-group-messages-files-loading-->
     <div id="gs-group-messages-files-latest" class="gs-search-results"
          aria-live="polite">
       &#160;
     </div><!--gs-group-messages-files-latest-->
-    <div id="gs-group-messages-files-toolbar" class="toolbar gs-search-toolbar" 
+    <div id="gs-group-messages-files-toolbar" class="toolbar gs-search-toolbar"
          style="display:none;" aria-visible="false">
       <span class="ui-widget-header ui-corner-all">
         <button id="gs-group-messages-files-toolbar-prev"
