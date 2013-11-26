@@ -27,8 +27,8 @@
     </div><!--gs-search-entry-->
     <p id="gs-group-messages-files-loading" class="gs-search-loading"
        style="display:none;" role="status">
-      <img  src="/++resource++anim/wait.gif" aria-visible="false" />
-      Loading the files&#8230;
+      <span data-icon="&#xe619;" aria-hidden="true" class="loading"> </span>
+      Loading the recent files&#8230;
     </p><!--gs-group-messages-files-loading-->
     <div id="gs-group-messages-files-latest" class="gs-search-results"
          aria-live="polite">
