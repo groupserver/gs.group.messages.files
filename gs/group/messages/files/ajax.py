@@ -1,9 +1,24 @@
 # -*- coding: utf-8 -*-
+##############################################################################
+#
+# Copyright © 2013, 2014 OnlineGroups.net and Contributors.
+# All Rights Reserved.
+#
+# This software is subject to the provisions of the Zope Public License,
+# Version 2.1 (ZPL).  A copy of the ZPL should accompany this distribution.
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
+# WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
+# FOR A PARTICULAR PURPOSE.
+#
+##############################################################################
+from __future__ import absolute_import, unicode_literals
 from zope.cachedescriptors.property import Lazy
 from AccessControl import getSecurityManager
+from gs.core import to_ascii
 from gs.group.base.page import GroupPage
 from gs.group.messages.base import get_icon
-from queries import FileQuery
+from .queries import FileQuery
 
 
 class FilesAjax(GroupPage):
@@ -23,9 +38,11 @@ class FilesAjax(GroupPage):
         for f in files:
             f['isImage'] = f['mime_type'][:5] == 'image'
             base = imgBase if f['isImage'] else fileBase
-            f['url'] = '{0}/{1}'.format(base, f['file_id'])
-            f['postUrl'] = '{0}/messages/post/{1}'.format(
-                                    self.groupInfo.relativeURL, f['post_id'])
+            imageUrl = '{0}/{1}'.format(base, f['file_id'])
+            f['url'] = to_ascii(imageUrl)
+            postUrl = '{0}/messages/post/{1}'.format(self.groupInfo.relativeURL,
+                                                        f['post_id'])
+            f['postUrl'] = postUrl
             f['imgUrl'] = \
                 '{0}/{1}'.format(fileBase, f['file_id']) if f['isImage'] else ''
             f['icon'] = get_icon(f['mime_type'])
