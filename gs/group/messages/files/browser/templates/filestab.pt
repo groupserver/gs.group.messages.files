@@ -22,7 +22,7 @@
          style="display:none;" aria-visible="false">
       <input type="search" name="s" placeholder="Search files&#8230;"
              autocomplete="on" value="" title="Search"/>
-      <button id="gs-group-messages-topics-search-button"
+      <button id="gs-group-messages-files-search-button"
               class="btn">Search</button>
     </div><!--gs-search-entry-->
     <p id="gs-group-messages-files-loading" class="gs-search-loading"
