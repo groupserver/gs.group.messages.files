@@ -1,6 +1,7 @@
+"use strict";
 // GroupServer JavaScript module for providing the Search mechanism
 //
-// Copyright © 2013 OnlineGroups.net and Contributors.
+// Copyright © 2013, 2014 OnlineGroups.net and Contributors.
 // All Rights Reserved.
 //
 // This software is subject to the provisions of the Zope Public License,
@@ -22,6 +23,6 @@ function gs_group_messages_files_init_home() {
 }
 
 jQuery(window).load(function () {
-    gsJsLoader.with_module('/++resource++gs-search-base-js-min-20131121.js',
+    gsJsLoader.with_module('/++resource++gs-search-base-js-min-20140313.js',
                            gs_group_messages_files_init_home);
 });
