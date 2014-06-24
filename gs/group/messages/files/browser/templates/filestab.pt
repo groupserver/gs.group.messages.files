@@ -1,7 +1,7 @@
-<div id="gs-group-messages-files" role="region"
+<div id="gs-group-messages-files" role="navigation"
      aria-labelledby="gs-group-messages-files-h">
   <h3 id="gs-group-messages-files-h">Recent files</h3>
-  <ul id="gs-group-messages-files-nav" role="navigation"
+  <ul id="gs-group-messages-files-nav"
       class="dotted-inline-list" >
     <li>
       <a tal:attributes="href string:/s?g=${view/groupInfo/id}&amp;f=1&amp;t=0"
