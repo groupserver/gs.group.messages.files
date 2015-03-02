@@ -64,6 +64,8 @@ Resources
 
 - Code repository:
   https://github.com/groupserver/gs.group.messages.files
+- Translations:
+  https://www.transifex.com/projects/p/gs-group-messages-files/
 - Questions and comments to
   http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver

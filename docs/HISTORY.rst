@@ -1,6 +1,16 @@
 Changelog
 =========
 
+2.3.1 (2015-03-02)
+------------------
+
+* Adding internationalisation
+* Naming the reStructuredText files as such
+* Pointing at GitHub_ as the primary repository
+
+.. _GitHub:
+   https://github.com/groupserver/gs.group.messages.files
+
 2.3.0 (2014-06-05)
 ------------------
 
@@ -51,3 +61,5 @@ Changelog
 ------------------
 
 * Initial version
+
+..  LocalWords:  Changelog GitHub reStructuredText
