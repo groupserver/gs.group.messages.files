@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+############################################################################
 #
-# Copyright © 2012, 2013, 2014 OnlineGroups.net and Contributors.
+# Copyright © 2012, 2013, 2014, 2015 OnlineGroups.net and Contributors.
 # All Rights Reserved.
 #
 # This software is subject to the provisions of the Zope Public License,
@@ -11,7 +11,7 @@
 # WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
 # FOR A PARTICULAR PURPOSE.
 #
-##############################################################################
+############################################################################
 import codecs
 import os
 from setuptools import setup, find_packages
@@ -21,10 +21,12 @@ version = get_version()
 
 with codecs.open('README.rst', encoding='utf-8') as f:
     long_description = f.read()
-with codecs.open(os.path.join("docs", "HISTORY.rst"), encoding='utf-8') as f:
+with codecs.open(os.path.join("docs", "HISTORY.rst"),
+                 encoding='utf-8') as f:
     long_description += '\n' + f.read()
 
-setup(name='gs.group.messages.files',
+setup(
+    name='gs.group.messages.files',
     version=version,
     description="The Files list in a GroupServer Group homepage.",
     long_description=long_description,
@@ -45,7 +47,7 @@ setup(name='gs.group.messages.files',
     keywords='groupserver message post files',
     author='Michael JasonSmith',
     author_email='mpj17@onlinegroups.net',
-    url='https://source.iopen.net/groupserver/gs.group.messages.files/',
+    url='https://github.com/groupserver/gs.group.messages.files/',
     license='ZPL 2.1',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['gs', 'gs.group', 'gs.group.messages'],
