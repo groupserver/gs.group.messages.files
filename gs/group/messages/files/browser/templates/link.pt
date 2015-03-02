@@ -1,5 +1,6 @@
-<link id="gs-group-messages-files-link" 
-  rel="alternate" type="application/atom+xml" title="Files Feed"
-  href="#"
-  tal:attributes="href string:/s/search.atom?g=${view/groupInfo/id}&amp;t=0&amp;p=0&amp;f=1;
-    title string:Files in ${view/groupInfo/name}"/>
+<link id="gs-group-messages-files-link"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      rel="alternate" type="application/atom+xml" title="Files Feed"
+      href="#"
+      tal:attributes="href string:/s/search.atom?g=${view/groupInfo/id}&amp;t=0&amp;p=0&amp;f=1;
+                      title string:Files in ${view/groupInfo/name}"/>

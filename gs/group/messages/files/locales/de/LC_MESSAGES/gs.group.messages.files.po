@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2015-03-02 18:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#. Default: "All files"
+#: ./browser/templates/filestab.pt:11
+msgid "All-files"
+msgstr ""
+
+#. Default: "File type: ${mimeType}"
+#: ./browser/templates/ajax.pt:22
+msgid "file-mime-type"
+msgstr ""
+
+#. Default: "${loadingIcon} Loading the recent files…"
+#: ./browser/templates/filestab.pt:37
+msgid "loading-message"
+msgstr ""
+
+#. Default: "No files were found."
+#: ./browser/templates/filestab.pt:45
+msgid "no-files-found"
+msgstr ""
+
+#. Default: "There are no files in this group."
+#: ./browser/templates/filestab.pt:48
+msgid "no-files-in-group"
+msgstr ""
+
+#. Default: "Posted in ${topicName}"
+#: ./browser/templates/ajax.pt:35
+msgid "posted=info"
+msgstr ""
+
+#. Default: "Recent files"
+#: ./browser/templates/filestab.pt:6
+msgid "recent-files"
+msgstr ""
+
+#. Default: "Web feed"
+#: ./browser/templates/filestab.pt:21
+msgid "web-feed"
+msgstr ""
+

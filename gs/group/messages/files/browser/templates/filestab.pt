@@ -1,11 +1,16 @@
 <div id="gs-group-messages-files" role="navigation"
-     aria-labelledby="gs-group-messages-files-h">
-  <h3 id="gs-group-messages-files-h">Recent files</h3>
+     aria-labelledby="gs-group-messages-files-h"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     i18n:domain="gs.group.messages.files">
+  <h3 id="gs-group-messages-files-h"
+      i18n:translate="recent-files">Recent files</h3>
   <ul id="gs-group-messages-files-nav"
       class="dotted-inline-list" >
     <li>
       <a tal:attributes="href string:/s?g=${view/groupInfo/id}&amp;f=1&amp;t=0"
-         href="#">All files</a>
+         href="#"
+         i18n:translate="All-files">All files</a>
     </li>
     <li>
       <a type="application/atom+xml" class="icon-alone" href="#"
@@ -13,7 +18,8 @@
          tal:attributes="href url;
                          title string:Files in ${view/groupInfo/name}">
         <span aria-hidden="true" data-icon="&#xe003;"></span>
-        <span class="screen-reader-text">Web feed</span>
+        <span class="screen-reader-text"
+              i18n:translate="web-feed">Web feed</span>
       </a>
     </li>
   </ul>
@@ -26,18 +32,20 @@
               class="btn">Search</button>
     </div><!--gs-search-entry-->
     <p id="gs-group-messages-files-loading" class="gs-search-loading"
-       style="display:none;" role="status">
-      <span data-icon="&#xe619;" aria-hidden="true" class="loading"> </span>
+       style="display:none;" role="status"
+       i18n:translate="loading-message">
+      <span i18n:name="loadingIcon" data-icon="&#xe619;" aria-hidden="true"
+            class="loading"> </span>
       Loading the recent files&#8230;
     </p><!--gs-group-messages-files-loading-->
     <div id="gs-group-messages-files-latest" class="gs-search-results"
          aria-live="polite">
       &#160;
     </div><!--gs-group-messages-files-latest-->
-    <p class="gs-search-failed">
+    <p class="gs-search-failed" i18n:translate="no-files-found">
       No files were found.
     </p><!--gs-search-failed-->
-    <p class="gs-search-empty muted">
+    <p class="gs-search-empty muted" i18n:translate="no-files-in-group">
       There are no files in this group.
     </p><!--gs-search-empty-->
     <div id="gs-group-messages-files-toolbar" class="toolbar gs-search-toolbar"

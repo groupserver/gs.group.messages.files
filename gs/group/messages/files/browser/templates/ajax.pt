@@ -1,4 +1,7 @@
-<div class="gs-search-results">
+<div class="gs-search-results"
+     xmlns:tal="http://xml.zope.org/namespaces/tal"
+     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+     i18n:domain="gs.group.messages.files">
   <tal:block repeat="file view/files">
     <div class="gs-search-result hmedia">
       <a tal:condition="file/isImage"
@@ -14,19 +17,23 @@
           tal:attributes="href file/url; title file/name; type file/mime_type">
          <span aria-hidden="true" data-icon="&#x1f3a8;"
                tal:attributes="data-icon file/icon"></span>
-         <span class="screen-reader-text">File type:
-           <span tal:content="file/mime_type">application/octet-stream</span>
+         <span class="screen-reader-text"
+               i18n:translate="file-mime-type">File type:
+           <span tal:content="file/mime_type"
+                 i18n:name="mimeType">application/octet-stream</span>
          </span>
        </a>
       <div class="fn">
         <a href="#" tal:content="file/name"
-           tal:attributes="href file/url; type file/mime_type; 
+           tal:attributes="href file/url; type file/mime_type;
                            title file/name;">Name</a>
       </div>
       <div class="muted">
-        <a href="#" 
-           tal:attributes="href file/postUrl">Posted in 
-        <em tal:content="file/subject">Topic</em></a>
+        <a href="#"
+           tal:attributes="href file/postUrl"
+           i18n:translate="posted=info">Posted in
+        <em tal:content="file/subject"
+            i18n:name="topicName">Topic</em></a>
       </div>
     </div>
   </tal:block>
