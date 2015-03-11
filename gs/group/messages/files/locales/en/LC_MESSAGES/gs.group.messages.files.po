@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "POT-Creation-Date: 2015-03-02 18:29+0000\n"
-"PO-Revision-Date: 2015-03-02 10:31-0800\n"
+"PO-Revision-Date: 2015-03-11 16:43-0700\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 #. Default: "All files"
 #: ./browser/templates/filestab.pt:11
 msgid "All-files"
-msgstr "All-files"
+msgstr "All files"
 
 #. Default: "File type: ${mimeType}"
 #: ./browser/templates/ajax.pt:22
