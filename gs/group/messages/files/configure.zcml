@@ -37,11 +37,11 @@
     weight="30"
     title="Files Script" />
   <browser:resource
-    name="gs-group-messages-files-20140313.js"
+    name="gs-group-messages-files-20160201.js"
     file="browser/javascript/files.js"
     permission="zope2.Public" />
   <browser:resource
-    name="gs-group-messages-files-min-20140313.js"
+    name="gs-group-messages-files-min-20160201.js"
     file="browser/javascript/files-min.js"
     permission="zope2.Public" />
   <browser:page
