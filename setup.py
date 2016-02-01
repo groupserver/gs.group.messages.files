@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 ############################################################################
 #
-# Copyright © 2012, 2013, 2014, 2015 OnlineGroups.net and Contributors.
+# Copyright © 2012, 2013, 2014, 2015, 2016 OnlineGroups.net and
+# Contributors.
+#
 # All Rights Reserved.
 #
 # This software is subject to the provisions of the Zope Public License,
@@ -17,6 +19,7 @@ import os
 from setuptools import setup, find_packages
 from version import get_version
 
+name = 'gs.group.messages.files'
 version = get_version()
 
 with codecs.open('README.rst', encoding='utf-8') as f:
@@ -26,7 +29,7 @@ with codecs.open(os.path.join("docs", "HISTORY.rst"),
     long_description += '\n' + f.read()
 
 setup(
-    name='gs.group.messages.files',
+    name=name,
     version=version,
     description="The Files list in a GroupServer Group homepage.",
     long_description=long_description,
@@ -48,10 +51,11 @@ setup(
     keywords='groupserver message post files',
     author='Michael JasonSmith',
     author_email='mpj17@onlinegroups.net',
-    url='https://github.com/groupserver/gs.group.messages.files/',
+    url='https://github.com/groupserver/{0}'.format(name),
     license='ZPL 2.1',
     packages=find_packages(exclude=['ez_setup']),
-    namespace_packages=['gs', 'gs.group', 'gs.group.messages'],
+    namespace_packages=['.'.join(name.split('.')[:i])
+                        for i in range(1, len(name.split('.')))],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
