@@ -23,6 +23,6 @@ function gs_group_messages_files_init_home() {
 }
 
 jQuery(window).load(function() {
-    gsJsLoader.with_module('/++resource++gs-search-base-js-min-20140313.js',
+    gsJsLoader.with_module('/++resource++gs-search-base-js-min-20160201.js',
                            gs_group_messages_files_init_home);
 });
