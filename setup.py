@@ -76,6 +76,8 @@ setup(
         'gs.group.messages.base',
         'gs.search.base',
     ],
+    test_suite="{0}.tests.test_all".format(name),
+    tests_require=['mock', ],
     entry_points="""
     # -*- Entry points: -*-
     """,)
