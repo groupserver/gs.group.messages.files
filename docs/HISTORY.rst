@@ -1,6 +1,19 @@
 Changelog
 =========
 
+2.3.3 (2016-02-02)
+------------------
+
+* [DE] Updating the German translation, thanks to Cousin Clara
+* Following the update to `gs.search.base`_
+* Updating the JavaScript that loads the *Files* area so it
+  passes the `Google Closure Linter`_
+* Adding some unit tests
+
+.. _gs.search.base: https://github.com/groupserver/gs.search.base
+.. _Google Closure Linter:
+   https://developers.google.com/closure/utilities/
+
 2.3.2 (2015-03-11)
 ------------------
 
