@@ -42,12 +42,12 @@ class FileQuery(object):
         retval = []
         if r.rowcount:
             retval = [{'user_id': row['user_id'],
-                        'file_id': row['file_id'],
-                        'mime_type': row['mime_type'],
-                        'name': row['file_name'],
-                        'size': row['file_size'],
-                        'date': row['date'],
-                        'post_date': row['post_date'],
-                        'post_id': row['post_id'],
-                        'subject': row['original_subject']} for row in r]
+                       'file_id': row['file_id'],
+                       'mime_type': row['mime_type'],
+                       'name': row['file_name'],
+                       'size': row['file_size'],
+                       'date': row['date'],
+                       'post_date': row['post_date'],
+                       'post_id': row['post_id'],
+                       'subject': row['original_subject']} for row in r]
         return retval
