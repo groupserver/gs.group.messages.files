@@ -7,7 +7,7 @@ The list of recently posted files in a group
 
 :Author: `Michael JasonSmith`_
 :Contact: Michael JasonSmith <mpj17@onlinegroups.net>
-:Date: 2015-03-02
+:Date: 2016-02-02
 :Organization: `GroupServer.org`_
 :Copyright: This document is licensed under a
 `Creative Commons Attribution-Share Alike 4.0 International License`_
@@ -43,7 +43,7 @@ Resource
 --------
 
 The JavaScript resource
-``gs-group-messages-files-js-20120604.js`` [#min]_ loads the
+``gs-group-messages-files-js-20160201.js`` [#min]_ loads the
 files from the page ``gs-group-messages-files-ajax.html`` in the
 Group context. It uses the ``GSSearch`` system to perform the
 search [#search]_.
@@ -81,6 +81,7 @@ Resources
             <https://github.com/groupserver/gs.group.home>
 .. _viewlet manager: http://docs.zope.org/zope.viewlet/
 .. [#min] The minified version
-          ``gs-group-messages-files-js-min-20120604.js`` is normally used.
+          ``gs-group-messages-files-js-min-20160201.js`` is
+          normally used.
 .. [#search] See ``gs.search.base``
              <https://github.com/groupserver/gs.search.base>
